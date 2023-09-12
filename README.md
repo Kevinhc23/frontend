@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aplicacion de registro de visitas para una empresa
 
-## Getting Started
+## Descripcion
 
-First, run the development server:
+Esta aplicacion permite registrar las visitas de los clientes a una empresa, ademas de poder ver las visitas registradas y poder editarlas o eliminarlas.
+
+## Instalacion
+
+Para instalar la aplicacion se debe clonar el repositorio y luego instalar las dependencias con el comando:
+
+```bash
+npm install
+```
+
+## Uso
+
+Para iniciar la aplicacion se debe ejecutar el comando:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para el correcto funcionamiento de la aplicacion se deben configurar las siguientes variables de entorno:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:5000
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=8fad42b3a342a382f2515d59312aea63
+```
 
-## Learn More
+## Credeniales de acceso
 
-To learn more about Next.js, take a look at the following resources:
+Para acceder a la aplicacion se debe usar el siguiente usuario:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+RECEPCIONISTA
+email: KevinHernandezcrespo97@gmail.com
+password: Kevinhc23
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+SUPERVISOR
+email: pedro@gmail.com
+password: Kevinhc23
+```
 
-## Deploy on Vercel
+## Contribucion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Los pull request son bienvenidos. Para cambios importantes, por favor abra un issue primero para discutir lo que le gustaria cambiar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licencia
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Autor
+
+[Kevin Hernandez Crespo](https://linkedin.com/in/kevinhc23/)
+
+## Version
+
+1.0.0
+
+## Tecnologias
+
+- Next.js
+- NextAuth.js
+- SQLIte
+- TailwindCSS
+- React
+- Typescript
+- SWR
+- React Hook Form
+- Sonner
