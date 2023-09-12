@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  output: {
+    publicPath: "dist/",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
