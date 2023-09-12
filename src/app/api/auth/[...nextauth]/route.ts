@@ -33,26 +33,22 @@ const handler = nextAuth({
           const token = data.token;
 
           const decoded = JSON.parse(atob(token.split(".")[1]));
-          console.log(decoded);
           const { email, role, id, lastname, name } = decoded;
 
           if (token) {
-            return {
-              id,
-              name,
-              lastname,
-              email,
-              role,
-            };
+            return { email, role, id, lastname, name, token };
           }
         }
-        throw new Error("No se pudo iniciar sesión");
+        return null;
       },
     }),
   ],
   callbacks: {
     async jwt({ token, user }) {
       return { ...token, ...user };
+    },
+    redirect({ url, baseUrl }) {
+      return url.startsWith(baseUrl) ? url : baseUrl;
     },
     async session({ session, token }) {
       session.user = token as any;
